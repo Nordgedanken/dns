@@ -1,0 +1,348 @@
+---
+'':
+  - ttl: 1800
+    type: A
+    value: 116.202.1.213
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
+  - ttl: 1800
+    type: CAA
+    values:
+      - flags: 0
+        tag: iodef
+        value: mailto:mtrnord@nordgedanken.dev
+      - flags: 0
+        tag: issue
+        value: letsencrypt.org; validationmethods=tls-alpn-01,dns-01,http-01
+  - ttl: 1800
+    type: MX
+    value:
+      exchange: mail.nordgedanken.dev.
+      preference: 10
+  - ttl: 600
+    type: NS
+    values:
+      - ns1.nordgedanken.dev.
+      - ns2.nordgedanken.dev.
+      - ns3.nordgedanken.dev.
+  - ttl: 1800
+    type: TXT
+    values:
+      - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
+      - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
+_autodiscover._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 443
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_dmarc:
+  ttl: 1800
+  type: TXT
+  value: v=DMARC1\; p=reject\; adkim=s\; aspf=s\; rua=mailto:postmaster@mail.nordgedanken.dev\;
+    ruf=mailto:postmaster@mail.nordgedanken.dev
+_dmarc.mail:
+  ttl: 1800
+  type: TXT
+  value: v=DMARC1\; p=reject\; adkim=s\; aspf=s\; rua=mailto:postmaster@mail.nordgedanken.dev\;
+    ruf=mailto:postmaster@mail.nordgedanken.dev
+_imap._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 143
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_imap._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 143
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_imaps._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 993
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_imaps._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 993
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_pop3._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 110
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_pop3._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 110
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_pop3s._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 995
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_pop3s._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 995
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_submission._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 587
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_submission._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 587
+    priority: 20
+    target: mail.nordgedanken.dev.
+    weight: 1
+_submissions._tcp:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 465
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+_submissions._tcp.mail:
+  ttl: 1800
+  type: SRV
+  value:
+    port: 465
+    priority: 10
+    target: mail.nordgedanken.dev.
+    weight: 1
+auth:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+autoconfig:
+  ttl: 1800
+  type: CNAME
+  value: mail.nordgedanken.dev.
+barcodebuddy:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+ci:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+cloud:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+console.s3.stream:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+dkim._domainkey:
+  ttl: 1800
+  type: TXT
+  value: v=DKIM1\; k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwpfwC7+gqVw55vqq+pqR3J0k/pBOVlyXqUo89D08zx91tLHy+mZFv3saiw94FzBEWF7cnvUSyDoyN9fnw6StNX3rMEvr2XCor+F2DpYjnG7gXjjkAPIs+d1/bja0MJkXjE0bXIET4yz3OjP9UVKMlIn3wkzr28KZShIGI8mtWUhC1oR7/tN8LOR1FoZB8GoEsgsOLZoHBUadjN8pE6LmS5MaaYcF3BdYTCQ63rpb5sf0hi9Hy1on+G7sDGE2Eg6ySlmzA9/Z4d8on3ghPKYRVLUs1Osf1k/hPsgJwxn/vDbxoBhaXUt+uxVMaLPadbhFHPWbUOZZD7LdiXjvhB+6wIDAQAB
+dkim._domainkey.mail:
+  ttl: 1800
+  type: TXT
+  value: v=DKIM1\; k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzq73h8EUXEpSzIMWppGWr08k0OpPJDZ6ohrTHlTGfELjxfLoY0ZKM1OsWhpTrFimRWWSoXCUQCfshSDw6KWEgF1TeTh/+jhBoyJwUH37phC/jrXBV7Zqs6iAcwCw1gznV2wWs/uBcJcamD8RRq2wwBN9cIZksca7J/Tkm3WzcxqriX8PpSm4cbYl1MjDl5K8JWTIxNWlRXKyDW8H4II7NPnwOK8keExYEIh7AkE4suegtu73dxEwSz7Ct9a+Ch8mNZsG3WI2JldlKRkvUJB3CdFYHXIjRV4ibghoZEFzYQN8LIz3l6BRxFgvLDVXYj0v21fMXa3nxes+2ou2/qfrGwIDAQAB
+git:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+github-hook:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+gitlab:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+grocy:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+kas:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+mail:
+  - ttl: 1800
+    type: A
+    value: 65.21.116.74
+  - ttl: 1800
+    type: MX
+    value:
+      exchange: mail.nordgedanken.dev.
+      preference: 10
+  - ttl: 1800
+    type: TXT
+    value: v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
+mail.k8s:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+mail.nordgedanken.dev._report._dmarc.mail:
+  ttl: 1800
+  type: TXT
+  value: v=DMARC1
+mastodon:
+  - ttl: 1800
+    type: A
+    value: 116.202.1.213
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
+minio:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+miounne:
+  ttl: 1800
+  type: CNAME
+  value: nordgedanken.dev.
+moderation_widget:
+  - ttl: 1800
+    type: A
+    value: 116.202.1.213
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
+morg:
+  ttl: 1800
+  type: CNAME
+  value: mtrnord.github.io.
+mta-sts:
+  ttl: 1800
+  type: CNAME
+  value: mail.nordgedanken.dev.
+mta-sts.mail.k8s:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+netbird:
+  - ttl: 1800
+    type: A
+    value: 65.21.116.74
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
+netbox:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+nordgedanken.dev._report._dmarc.mail:
+  ttl: 1800
+  type: TXT
+  value: v=DMARC1
+ns1:
+  - ttl: 1800
+    type: A
+    value: 65.21.116.72
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::5
+ns2:
+  - ttl: 1800
+    type: A
+    value: 37.27.5.79
+  - ttl: 1800
+    type: AAAA
+    value: '2a01:4f9:c012:54d3::'
+ns3:
+  - ttl: 1800
+    type: A
+    value: 37.27.7.20
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:c012:3124::1
+pages:
+  ttl: 1800
+  type: A
+  value: 65.21.116.73
+paperless:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+registry:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+s3.stream:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+search:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+social:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+stats:
+  - ttl: 1800
+    type: A
+    value: 116.202.1.213
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
+status:
+  ttl: 1800
+  type: CNAME
+  value: mtrnord.github.io.
+stream:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+support:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+time:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+trans:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+vault:
+  ttl: 1800
+  type: A
+  value: 65.21.116.72
+www:
+  ttl: 1800
+  type: CNAME
+  value: nordgedanken.dev.

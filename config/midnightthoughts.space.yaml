@@ -1,17 +1,17 @@
 ---
-? ''
-: - ttl: 1800
+'':
+  - ttl: 1800
     type: A
     value: 65.21.116.72
   - ttl: 1800
     type: CAA
     values:
-    - flags: 0
-      tag: iodef
-      value: mailto:mtrnord@nordgedanken.dev
-    - flags: 0
-      tag: issue
-      value: letsencrypt.org; validationmethods=tls-alpn-01,dns-01,http-01
+      - flags: 0
+        tag: iodef
+        value: mailto:mtrnord@nordgedanken.dev
+      - flags: 0
+        tag: issue
+        value: letsencrypt.org; validationmethods=tls-alpn-01,dns-01,http-01
   - ttl: 1800
     type: MX
     value:
@@ -20,9 +20,9 @@
   - ttl: 600
     type: NS
     values:
-    - ns1.nordgedanken.dev.
-    - ns2.nordgedanken.dev.
-    - ns3.nordgedanken.dev.
+      - ns1.nordgedanken.dev.
+      - ns2.nordgedanken.dev.
+      - ns3.nordgedanken.dev.
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
@@ -40,12 +40,12 @@ art:
   type: A
   value: 65.21.116.72
 castopod:
-- ttl: 1800
-  type: A
-  value: 65.21.116.74
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f9:4a:451c:2::2
+  - ttl: 1800
+    type: A
+    value: 65.21.116.74
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
 coreharbor.kubernetes:
   ttl: 1800
   type: A
@@ -79,12 +79,12 @@ grafana:
   type: A
   value: 65.21.116.72
 headscale:
-- ttl: 1800
-  type: A
-  value: 49.13.24.105
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f8:c012:492::1
+  - ttl: 1800
+    type: A
+    value: 49.13.24.105
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f8:c012:492::1
 hookshot:
   ttl: 1800
   type: A
@@ -94,37 +94,37 @@ keycloak:
   type: A
   value: 65.21.116.72
 kubernetes:
-- ttl: 1800
-  type: A
-  value: 95.217.202.35
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f9:4a:451c:2::5
+  - ttl: 1800
+    type: A
+    value: 95.217.202.35
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::5
 lg:
-- ttl: 1800
-  type: A
-  value: 49.13.24.105
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f8:c012:492::1
+  - ttl: 1800
+    type: A
+    value: 49.13.24.105
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f8:c012:492::1
 mail:
-- ttl: 1800
-  type: A
-  value: 95.217.202.35
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f9:4a:451c:ffff:ffff:ffff:eeee
-- ttl: 1800
-  type: MX
-  value:
-    exchange: mail.midnightthoughts.space.
-    preference: 10
-- ttl: 1800
-  type: TXT
-  values:
-  - google-site-verification=d5k_X67W_dLDw_KMEqTywt6s3ywb_3Nh-dWUuhoAhz0
-  - v=spf1 mx include:_spf.mx.cloudflare.net a:mail.midnightthoughts.space ip4:65.21.116.72
-    ~all
+  - ttl: 1800
+    type: A
+    value: 95.217.202.35
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:ffff:ffff:ffff:eeee
+  - ttl: 1800
+    type: MX
+    value:
+      exchange: mail.midnightthoughts.space.
+      preference: 10
+  - ttl: 1800
+    type: TXT
+    values:
+      - google-site-verification=d5k_X67W_dLDw_KMEqTywt6s3ywb_3Nh-dWUuhoAhz0
+      - v=spf1 mx include:_spf.mx.cloudflare.net a:mail.midnightthoughts.space ip4:65.21.116.72
+        ~all
 matrix:
   ttl: 1800
   type: A
@@ -154,12 +154,12 @@ notes:
   type: CNAME
   value: cname.vercel-dns.com.
 pbx:
-- ttl: 1800
-  type: A
-  value: 49.13.24.105
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f8:c012:492::1
+  - ttl: 1800
+    type: A
+    value: 49.13.24.105
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f8:c012:492::1
 postgres-ui:
   ttl: 1800
   type: A
@@ -177,12 +177,12 @@ rook.ceph:
   type: A
   value: 65.21.116.72
 rspamd:
-- ttl: 1800
-  type: A
-  value: 65.21.116.74
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f9:4a:451c:2::2
+  - ttl: 1800
+    type: A
+    value: 65.21.116.74
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f9:4a:451c:2::2
 search.art:
   ttl: 1800
   type: A
@@ -220,9 +220,9 @@ zammad:
   type: A
   value: 65.21.116.72
 znc:
-- ttl: 1800
-  type: A
-  value: 49.13.24.105
-- ttl: 1800
-  type: AAAA
-  value: 2a01:4f8:c012:492::1
+  - ttl: 1800
+    type: A
+    value: 49.13.24.105
+  - ttl: 1800
+    type: AAAA
+    value: 2a01:4f8:c012:492::1
