@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
+    paths:
+      - '*.yaml'
+      - '!.github/**'
 jobs:
   linting:
     runs-on: ubuntu-latest
@@ -13,6 +16,9 @@ jobs:
       - name: Run yamllint
         run: yamllint .
   validate:
+    permissions:
+      issues: write
+      pull-requests: write
     needs: linting
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
@@ -25,6 +31,10 @@ jobs:
       - uses: solvaholic/octodns-sync@main
         with:
           config_path: config/production.yaml
+        env:
+          POWERDNS_API_KEY_NS1: ${{ secrets.POWERDNS_API_KEY_NS1 }}
+          POWERDNS_API_KEY_NS2: ${{ secrets.POWERDNS_API_KEY_NS2 }}
+          POWERDNS_API_KEY_NS3: ${{ secrets.POWERDNS_API_KEY_NS3 }}
       - name: Get plan output
         id: meta
         run: |
