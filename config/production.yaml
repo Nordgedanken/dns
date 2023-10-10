@@ -3,6 +3,9 @@ manager:
   plan_outputs:
     html:
       class: octodns.provider.plan.PlanMarkdown
+processors:
+  spf:
+    class: octodns_spf.SpfDnsLookupProcessor
 providers:
   config:
     class: octodns.provider.yaml.YamlProvider
@@ -42,6 +45,7 @@ providers:
 zones:
   midnightthoughts.space.: &default
     sources: [config]
+    processors: [spf]
     targets: [powerdns_ns1, powerdns_ns2, powerdns_ns3]
   nordgedanken.dev.: *default
   miki.community.: *default
