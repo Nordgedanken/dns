@@ -26,10 +26,6 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
-_acme-challenge:
-  ttl: 1800
-  type: TXT
-  value: ht72nkSy0CBbNUyeoBdngJOMbViGNk-HhH04nnUSH0w
 _dmarc.mail:
   ttl: 1800
   type: TXT
@@ -39,18 +35,7 @@ art:
   ttl: 1800
   type: A
   value: 65.21.116.72
-castopod:
-  - ttl: 1800
-    type: A
-    value: 65.21.116.74
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::2
 coreharbor.kubernetes:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-dashboard.ceph:
   ttl: 1800
   type: A
   value: 65.21.116.72
@@ -137,18 +122,10 @@ matrix.draupnir:
   ttl: 1800
   type: A
   value: 65.21.116.72
-nextcloud:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
 nordgedanken.lg:
   ttl: 1800
   type: A
   value: 10.100.0.2
-notaryharbor.kubernetes:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
 notes:
   ttl: 1800
   type: CNAME
@@ -169,10 +146,6 @@ postgres.internal:
   type: A
   value: 10.100.12.1
 redmine:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-rook.ceph:
   ttl: 1800
   type: A
   value: 65.21.116.72
