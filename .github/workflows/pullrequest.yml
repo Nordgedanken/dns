@@ -3,13 +3,14 @@ name: Validate
 on:
   push:
     branches: [main]
-  pull_request:
+  issue_comment:
+    types: [created]
 jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
       - name: Run yamllint
         run: yamllint .
   validate:
@@ -17,11 +18,16 @@ jobs:
       issues: write
       pull-requests: write
     needs: linting
-    if: ${{ github.event_name == 'pull_request' }}
+    if: ${{ github.event.isue.pullrequest && contains(github.event.comment.body, '/test') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Get PR branch
+        uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
