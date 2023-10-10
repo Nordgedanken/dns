@@ -1,0 +1,26 @@
+name: octodns Deploy
+
+on:
+  # Deploy config whenever DNS changes are pushed to main.
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish DNS config from main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - uses: solvaholic/octodns-sync@main
+        with:
+          config_path: config/production.yaml
+          doit: '--doit'
+        env:
+          POWERDNS_API_KEY_NS1: ${{ secrets.POWERDNS_API_KEY_NS1 }}
+          POWERDNS_API_KEY_NS2: ${{ secrets.POWERDNS_API_KEY_NS2 }}
+          POWERDNS_API_KEY_NS3: ${{ secrets.POWERDNS_API_KEY_NS3 }}

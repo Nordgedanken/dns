@@ -1,0 +1,47 @@
+---
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./config
+    default_ttl: 3600
+    enforce_order: True
+  powerdns_ns1:
+      class: octodns_powerdns.PowerDnsProvider
+      # The host on which PowerDNS api is listening (required)
+      host: 65.21.116.72
+      # The port on whih PowerDNS api is listening (optional, default 8081)
+      port: 8082
+      # The api key that grans access (required, example is using an env var)
+      api_key: env/POWERDNS_API_KEY_NS1
+      # Send DNS NOTIFY to secondary servers after change (optional, default false)
+      # notify: false
+  powerdns_ns2:
+      class: octodns_powerdns.PowerDnsProvider
+      # The host on which PowerDNS api is listening (required)
+      host: 37.27.5.79
+      # The port on whih PowerDNS api is listening (optional, default 8081)
+      port: 8081
+      # The api key that grans access (required, example is using an env var)
+      api_key: env/POWERDNS_API_KEY_NS2
+      # Send DNS NOTIFY to secondary servers after change (optional, default false)
+      # notify: false
+  powerdns_ns3:
+      class: octodns_powerdns.PowerDnsProvider
+      # The host on which PowerDNS api is listening (required)
+      host: 37.27.7.20
+      # The port on whih PowerDNS api is listening (optional, default 8081)
+      port: 8081
+      # The api key that grans access (required, example is using an env var)
+      api_key: env/POWERDNS_API_KEY_NS3
+      # Send DNS NOTIFY to secondary servers after change (optional, default false)
+      # notify: false
+zones:
+  midnightthoughts.space.: &default
+    sources:
+      - config
+    targets:
+      - powerdns_ns1
+      - powerdns_ns2
+      - powerdns_ns3
+  nordgedanken.dev.: *default
+  miki.community.: *default
