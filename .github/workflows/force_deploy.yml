@@ -16,7 +16,7 @@ jobs:
         uses: xt0rted/pull-request-comment-branch@v2
         id: comment-branch
       - name: Set commit status as pending
-        uses: myrotvorets/set-commit-status-action@v2
+        uses: myrotvorets/set-commit-status-action@master
         with:
           status: pending
           context: Force deploying changes
@@ -39,7 +39,7 @@ jobs:
           POWERDNS_API_KEY_NS3: ${{ secrets.POWERDNS_API_KEY_NS3 }}
 
       - name: Set final commit status
-        uses: myrotvorets/set-commit-status-action@v2
+        uses: myrotvorets/set-commit-status-action@master
         if: always()
         with:
           sha: ${{ steps.comment-branch.outputs.head_sha }}
