@@ -11,7 +11,7 @@ providers:
     class: octodns.provider.yaml.YamlProvider
     directory: ./config
     default_ttl: 3600
-    enforce_order: true
+    enforce_order: false
   powerdns_ns1:
     class: octodns_powerdns.PowerDnsProvider
     # The host on which PowerDNS api is listening (required)
