@@ -35,6 +35,7 @@ jobs:
       - uses: solvaholic/octodns-sync@main
         with:
           config_path: config/production.yaml
+          force: "Yes"
         env:
           POWERDNS_API_KEY_NS1: ${{ secrets.POWERDNS_API_KEY_NS1 }}
           POWERDNS_API_KEY_NS2: ${{ secrets.POWERDNS_API_KEY_NS2 }}
