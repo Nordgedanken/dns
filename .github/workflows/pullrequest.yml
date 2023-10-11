@@ -9,10 +9,28 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
+      - name: Get PR branch
+        uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
+        if: github.event.client_payload.slash_command
+      - name: Set commit status as pending
+        uses: myrotvorets/set-commit-status-action@master
+        with:
+          status: pending
+          context: Linting changes
+          sha: ${{ steps.comment-branch.outputs.head_sha }}
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Run yamllint
         run: yamllint .
+      - name: Set final commit status
+        uses: myrotvorets/set-commit-status-action@master
+        if: github.event.client_payload.slash_command
+        with:
+          sha: ${{ steps.comment-branch.outputs.head_sha }}
+          status: ${{ job.status }}
+          context: Linting changes
+
   validate:
     permissions:
       issues: write
