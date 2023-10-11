@@ -9,25 +9,22 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR branch
-        uses: xt0rted/pull-request-comment-branch@v2
-        id: comment-branch
-        if: github.event.client_payload.slash_command
       - name: Set commit status as pending
         uses: myrotvorets/set-commit-status-action@master
+        if: github.event.client_payload.slash_command && github.event.client_payload.pull_request
         with:
           status: pending
           context: Linting changes
-          sha: ${{ steps.comment-branch.outputs.head_sha }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Run yamllint
         run: yamllint .
       - name: Set final commit status
         uses: myrotvorets/set-commit-status-action@master
-        if: github.event.client_payload.slash_command
+        if: github.event.client_payload.slash_command && github.event.client_payload.pull_request
         with:
-          sha: ${{ steps.comment-branch.outputs.head_sha }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
           status: ${{ job.status }}
           context: Linting changes
 
@@ -38,21 +35,18 @@ jobs:
       contents: read
       statuses: write
     needs: linting
-    if: github.event.client_payload.slash_command
+    if: github.event.client_payload.slash_command && github.event.client_payload.pull_request
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR branch
-        uses: xt0rted/pull-request-comment-branch@v2
-        id: comment-branch
       - name: Set commit status as pending
         uses: myrotvorets/set-commit-status-action@master
         with:
           status: pending
           context: Verifying changes
-          sha: ${{ steps.comment-branch.outputs.head_sha }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
       - uses: actions/checkout@v3
         with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
       - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
@@ -76,7 +70,7 @@ jobs:
           # Set output 'plan' to $_plan
           echo "::set-output name=plan::${_plan}"
           # Set $_sha to the first 7 char of PR head SHA
-          _sha="$(echo "${{ steps.comment-branch.outputs.head_sha }}" | cut -c 1-7)"
+          _sha="$(echo "${{ github.event.client_payload.pull_request.head.sha }}" | cut -c 1-7)"
           # Set output 'sha' to $_sha
           echo "::set-output name=sha::${_sha}"
       - name: Find comment
@@ -101,6 +95,6 @@ jobs:
         uses: myrotvorets/set-commit-status-action@master
         if: always()
         with:
-          sha: ${{ steps.comment-branch.outputs.head_sha }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
           status: ${{ job.status }}
           context: Verifying changes
