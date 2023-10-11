@@ -1,8 +1,8 @@
 ---
 name: Force deploy
 on:
-  issue_comment:
-    types: [created]
+  repository_dispatch:
+    types: [force-deploy-command]
 jobs:
   force_deploy:
     permissions:
@@ -10,7 +10,6 @@ jobs:
       pull-requests: write
       contents: read
       statuses: write
-    if: github.event.issue.pull_request && contains(github.event.comment.body, '/force_deploy') && (contains(github.event.comment.author_association, 'OWNER') || contains(github.event.comment.author_association, 'MEMBER'))
     runs-on: ubuntu-latest
     steps:
       - name: Get PR branch
