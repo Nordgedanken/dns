@@ -35,6 +35,10 @@ _acme-challenge:
   ttl: 120
   type: TXT
   value: OiOHutv9PVatSqDpm-ApWOSNEnnrVVntk8cFLMN53aI
+_acme-challenge.serverstats:
+  ttl: 120
+  type: TXT
+  value: czwb11JiJCBxYlsgXtjWHTZEdH-0NwHQstlolzMxrJ8
 # Email
 _autodiscover._tcp:
   ttl: 1800
