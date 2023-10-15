@@ -31,6 +31,10 @@
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
       - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
+_acme-challenge.auth:
+  ttl: 120
+  type: TXT
+  value: dqDG70BEpfuNQ6ihreoJDamEVZn3QcF5SMeLS7Mwsbg
 
 # Email
 _autodiscover._tcp:
