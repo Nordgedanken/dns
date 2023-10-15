@@ -26,6 +26,10 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=tcGRl_gNRBdFRI8-tNAPj6x-8FbmGihFNcYn9_xS7tc
+_acme-challenge.rdf:
+  ttl: 120
+  type: TXT
+  value: EqcF4HWw346RCxcPUF9_-bLbLhQb8CixnA7YlQkwSFg
 _autodiscover._tcp:
   ttl: 1800
   type: SRV
