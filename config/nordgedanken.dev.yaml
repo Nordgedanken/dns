@@ -34,7 +34,7 @@
 _acme-challenge:
   ttl: 120
   type: TXT
-  value: OiOHutv9PVatSqDpm-ApWOSNEnnrVVntk8cFLMN53aI
+  value: tSRgWdF41qESCuTM9Aqgf7QWP5Qt7WlnGABd8PRWilA
 _acme-challenge.serverstats:
   ttl: 120
   type: TXT
