@@ -31,10 +31,10 @@
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
       - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
-_acme-challenge.mitfahrbank:
+_acme-challenge.ffslfl:
   ttl: 120
   type: TXT
-  value: ybcf0yJg9g0jSf4S-m1p82Ol3C9zMDRuiTtxTrqsdkg
+  value: kKYvJfbsGWvtAuS-F-bD0c56htLQhXWNO6MkuJ70jtU
 # Email
 _autodiscover._tcp:
   ttl: 1800
