@@ -98,3 +98,8 @@ forum:
   ttl: 1800
   type: A
   value: 49.13.24.105
+rdf:
+  ttl: 1800
+  type: A
+  value: 65.21.116.74
+  
