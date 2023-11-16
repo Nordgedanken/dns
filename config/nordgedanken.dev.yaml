@@ -43,7 +43,7 @@ _acme-challenge.serverstats:
 # Family
 recipes:
   type: CNAME
-  value: mtrnord.github.io
+  value: mtrnord.github.io.
   
 # Email
 _autodiscover._tcp:
