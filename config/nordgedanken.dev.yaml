@@ -39,6 +39,12 @@ _acme-challenge.serverstats:
   ttl: 120
   type: TXT
   value: czwb11JiJCBxYlsgXtjWHTZEdH-0NwHQstlolzMxrJ8
+
+# Family
+recipes:
+  type: CNAME
+  value: mtrnord.github.io
+  
 # Email
 _autodiscover._tcp:
   ttl: 1800
