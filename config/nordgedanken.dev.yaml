@@ -44,7 +44,7 @@ _acme-challenge.serverstats:
 recipes:
   type: CNAME
   value: mtrnord.github.io.
-  
+
 # Email
 _autodiscover._tcp:
   ttl: 1800
