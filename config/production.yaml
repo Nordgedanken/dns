@@ -32,16 +32,6 @@ providers:
     api_key: env/POWERDNS_API_KEY_NS2
     # Send DNS NOTIFY to secondary servers after change (optional, default false)
     # notify: false
-  powerdns_ns3:
-    class: octodns_powerdns.PowerDnsProvider
-    # The host on which PowerDNS api is listening (required)
-    host: 37.27.7.20
-    # The port on whih PowerDNS api is listening (optional, default 8081)
-    port: 8081
-    # The api key that grans access (required, example is using an env var)
-    api_key: env/POWERDNS_API_KEY_NS3
-    # Send DNS NOTIFY to secondary servers after change (optional, default false)
-    # notify: false
   powerdns_ns3_v2:
     class: octodns_powerdns.PowerDnsProvider
     # The host on which PowerDNS api is listening (required)
@@ -56,6 +46,6 @@ zones:
   midnightthoughts.space.: &default
     sources: [config]
     processors: [spf]
-    targets: [powerdns_ns1, powerdns_ns2, powerdns_ns3, powerdns_ns3_v2]
+    targets: [powerdns_ns1, powerdns_ns2, powerdns_ns3_v2]
   nordgedanken.dev.: *default
   miki.community.: *default
