@@ -31,10 +31,10 @@
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
       - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
-_acme-challenge.mail:
+_acme-challenge:
   ttl: 120
   type: TXT
-  value: mjqeshuaJUVop7dzvQ8pTJnJEfzdif9aPeDN--En2_M
+  value: TTICh5OnLg9sGaVHcINwOOmVFnIAkVLB3Ky4vWb-aYg
 
 # Family
 recipes:
