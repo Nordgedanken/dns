@@ -26,10 +26,10 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
-_acme-challenge.mail:
+_acme-challenge:
   ttl: 120
   type: TXT
-  value: zH0tWJniG1uFfGkoUY0qjMkv7Rk1I2OR6K0Uz9t3o38
+  value: JCNdV9ZjnlmosmLQQHncPLOYCRikQoi0I6MPzrnzLwA
 _dmarc.mail:
   ttl: 1800
   type: TXT
