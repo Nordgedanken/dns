@@ -206,10 +206,10 @@ znc:
 search:
   - ttl: 1800
     type: A
-    value: 37.27.5.79
+    value: "37.27.5.79"
   - ttl: 1800
     type: AAAA
-    value: 2a01:4f9:c012:54d3::
+    value: "2a01:4f9:c012:54d3::"
 # Personal discourse store
 personal:
   - ttl: 1800
