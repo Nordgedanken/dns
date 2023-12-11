@@ -167,6 +167,7 @@ mail.k8s: *kubernetes
 netbox: *kubernetes
 paperless: *kubernetes
 search: *kubernetes
+zuul: *kubernetes
 
 # Others
 mastodon:
