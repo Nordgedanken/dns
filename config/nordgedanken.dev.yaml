@@ -30,7 +30,7 @@
     type: TXT
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
-      - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
+      - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ip4:95.217.202.35 ~all
 _acme-challenge.mta-sts:
   ttl: 120
   type: TXT
