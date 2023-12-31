@@ -168,6 +168,7 @@ netbox: *kubernetes
 paperless: *kubernetes
 search: *kubernetes
 zuul: *kubernetes
+piwigo: *kubernetes
 
 # Others
 mastodon:
