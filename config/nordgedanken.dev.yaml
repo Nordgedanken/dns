@@ -169,6 +169,7 @@ paperless: *kubernetes
 search: *kubernetes
 zuul: *kubernetes
 piwigo: *kubernetes
+umami: *kubernetes
 
 # Others
 mastodon:
