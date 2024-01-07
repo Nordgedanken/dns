@@ -2,7 +2,7 @@
 '':
   - ttl: 1800
     type: ALIAS
-    value: personal-website-bsz.pages.dev
+    value: personal-website-bsz.pages.dev.
   - ttl: 1800
     type: CAA
     values:
