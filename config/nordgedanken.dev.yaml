@@ -157,15 +157,12 @@ nordgedanken.dev._report._dmarc.mail:
 
 # Kubernetes
 kubernetes: &kubernetes
-  - ttl: 1800
-    type: A
-    value: 65.21.116.72
   - ttl: 60
     type: A
-    value: 65.109.5.159
-  - ttl: 60
-    type: A
-    value: 37.27.7.20
+    values:
+      - 65.21.116.72
+      - 65.109.5.159
+      - 37.27.7.20
   - ttl: 60
     type: AAAA
     value: '2a01:4f9:4a:451c::1'
