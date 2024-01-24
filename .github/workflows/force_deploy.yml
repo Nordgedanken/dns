@@ -1,6 +1,7 @@
 ---
 name: Force deploy
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [force-deploy-command]
 jobs:
