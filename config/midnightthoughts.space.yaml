@@ -83,7 +83,7 @@ mail:
       - v=spf1 mx include:_spf.mx.cloudflare.net a:mail.midnightthoughts.space ip4:65.21.116.72
         ~all
         
-kubernetes: &kubernetes
+kubernetes_ingress: &kubernetes
   - ttl: 60
     type: A
     values:
