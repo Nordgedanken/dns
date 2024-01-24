@@ -35,18 +35,6 @@ _dmarc.mail:
   type: TXT
   value: v=DMARC1\; p=none\; sp=none\; fo=1\; ri=3600\; rua=mailto:mtrnord@nordgedanken.dev\;
     ruf=mailto:mtrnord@nordgedanken.dev
-art:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-coreharbor.kubernetes:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-dashboard.kubernetes:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
 default._domainkey.mail:
   ttl: 1800
   type: TXT
@@ -55,18 +43,6 @@ docs.draupnir:
   ttl: 1800
   type: CNAME
   value: the-draupnir-project.github.io.
-draupnir:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-fleet:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-grafana:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
 headscale:
   - ttl: 1800
     type: A
@@ -74,14 +50,6 @@ headscale:
   - ttl: 1800
     type: AAAA
     value: 2a01:4f8:c012:492::1
-hookshot:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-keycloak:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
 kubernetes:
   - ttl: 1800
     type: A
@@ -120,8 +88,6 @@ kubernetes: &kubernetes
     type: A
     values:
       - 65.21.116.72
-      - 65.109.5.159
-      - 37.27.7.20
   - ttl: 60
     type: AAAA
     value: '2a01:4f9:4a:451c::1'
@@ -135,6 +101,14 @@ spec: *kubernetes
 weave: *kubernetes
 webhook.kubernetes: *kubernetes
 zammad: *kubernetes
+art: *kubernetes
+coreharbor.kubernetes: *kubernetes
+dashboard.kubernetes: *kubernetes
+draupnir: *kubernetes
+fleet: *kubernetes
+grafana: *kubernetes
+hookshot: *kubernetes
+keycloak: *kubernetes
 
 nordgedanken.lg:
   ttl: 1800
