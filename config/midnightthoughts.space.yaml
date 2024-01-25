@@ -88,12 +88,12 @@ kubernetes_ingress: &kubernetes
     type: A
     values:
       - 65.21.116.72
-      - 65.109.5.159
+      #- 65.109.5.159
   - ttl: 60
     type: AAAA
     values:
       - '2a01:4f9:4a:451c::1'
-      - '2a01:4f9:c012:550::1'
+      #- '2a01:4f9:c012:550::1'
 matrix: *kubernetes
 auth: *kubernetes
 matrix.art: *kubernetes
