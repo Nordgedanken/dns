@@ -54,9 +54,9 @@ kubernetes:
   - ttl: 1800
     type: A
     value: 95.217.202.35
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::5
+#  - ttl: 1800
+#    type: AAAA
+#    value: 2a01:4f9:4a:451c:2::5
 lg:
   - ttl: 1800
     type: A
