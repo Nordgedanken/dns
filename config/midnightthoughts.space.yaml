@@ -117,7 +117,7 @@ keycloak: *kubernetes
 nordgedanken.lg:
   ttl: 1800
   type: A
-  value: 10.100.0.2
+  value: 10.0.1.2
 notes:
   ttl: 1800
   type: CNAME
@@ -148,11 +148,11 @@ status.draupnir:
 worker-1.lg:
   ttl: 1800
   type: A
-  value: 10.100.0.1
+  value: 10.0.2.1
 worker-2.lg:
   ttl: 1800
   type: A
-  value: 10.100.0.3
+  value: 10.0.2.2
 znc:
   - ttl: 1800
     type: A
