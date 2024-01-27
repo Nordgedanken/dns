@@ -132,7 +132,7 @@ pbx:
 postgres.internal:
   ttl: 1800
   type: A
-  value: 10.100.12.1
+  value: 10.0.12.1
 redmine: *kubernetes
 rspamd:
   - ttl: 1800
