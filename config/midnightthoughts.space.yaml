@@ -82,7 +82,6 @@ mail:
       - google-site-verification=d5k_X67W_dLDw_KMEqTywt6s3ywb_3Nh-dWUuhoAhz0
       - v=spf1 mx include:_spf.mx.cloudflare.net a:mail.midnightthoughts.space ip4:65.21.116.72
         ~all
-
 kubernetes_ingress: &kubernetes
   - ttl: 60
     type: A
@@ -113,7 +112,6 @@ fleet: *kubernetes
 grafana: *kubernetes
 hookshot: *kubernetes
 keycloak: *kubernetes
-
 nordgedanken.lg:
   ttl: 1800
   type: A
@@ -175,4 +173,3 @@ personal:
   - ttl: 1800
     type: AAAA
     value: "2a01:4f9:c012:54d3::"
-
