@@ -148,11 +148,11 @@ status.draupnir:
 worker-1.lg:
   ttl: 1800
   type: A
-  value: 10.0.2.1
+  value: 10.0.2.2
 worker-2.lg:
   ttl: 1800
   type: A
-  value: 10.0.2.2
+  value: 10.0.2.3
 znc:
   - ttl: 1800
     type: A
