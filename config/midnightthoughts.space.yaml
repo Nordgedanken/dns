@@ -87,8 +87,8 @@ kubernetes_ingress: &kubernetes
     type: A
     values:
       - 65.21.116.72
-      - 65.109.5.159
-      - 37.27.7.20
+      - 49.13.24.105
+      - 37.27.5.79
   - ttl: 60
     type: AAAA
     values:
