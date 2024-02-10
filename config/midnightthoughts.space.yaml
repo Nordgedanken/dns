@@ -91,8 +91,8 @@ kubernetes_ingress: &kubernetes
       - 37.27.5.79
   - ttl: 60
     type: AAAA
-    values:
-      - '2a01:4f9:4a:451c::1'
+    values: []
+      #- '2a01:4f9:4a:451c::1'
 matrix: *kubernetes
 auth: *kubernetes
 matrix.art: *kubernetes
