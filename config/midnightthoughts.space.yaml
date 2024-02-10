@@ -93,7 +93,6 @@ kubernetes_ingress: &kubernetes
     type: AAAA
     values:
       - '2a01:4f9:4a:451c::1'
-      #- '2a01:4f9:c012:550::1'
 matrix: *kubernetes
 auth: *kubernetes
 matrix.art: *kubernetes
