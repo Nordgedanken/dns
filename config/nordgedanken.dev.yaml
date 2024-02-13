@@ -161,7 +161,7 @@ kubernetes: &kubernetes
     type: A
     values:
       - 65.21.116.72
-      - 49.13.24.105
+      - 159.69.103.159
       - 65.109.241.200
   - ttl: 60
     type: AAAA
