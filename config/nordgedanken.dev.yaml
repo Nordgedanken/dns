@@ -161,9 +161,13 @@ kubernetes: &kubernetes
     type: A
     values:
       - 65.21.116.72
+      - 49.13.24.105
+      - 37.27.5.79
   - ttl: 60
     type: AAAA
-    value: '2a01:4f9:4a:451c::1'
+    values:
+      - '2a01:4f8:c012:492::1'
+      - '2a01:4f9:c012:54d3::1'
 auth: *kubernetes
 git: *kubernetes
 github-hook: *kubernetes
