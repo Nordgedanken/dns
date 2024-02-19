@@ -179,7 +179,7 @@ personal:
     type: AAAA
     value: "2a01:4f9:c012:54d3::"
 
-_acme-challenge.mail:
+_acme-challenge:
   ttl: 15
   type: TXT
-  value: ja0ItcmNOoU2I-5Bpdx3WIkOfguHWzgF_bF8dyCsQuU
+  value: Mb0--1OsXaW3G2ugkX8VmsVBJ2ijCg8gf301rxfqK0E
