@@ -182,3 +182,8 @@ personal:
   - ttl: 1800
     type: AAAA
     value: "2a01:4f9:c012:54d3::"
+
+_acme-challenge:
+  ttl: 15
+  type: TXT
+  value: Fwzo8N8xkVvoJkombdv8KD682DSzFlxDrAqtb80vIIU
