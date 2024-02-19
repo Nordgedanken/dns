@@ -34,10 +34,6 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
-_acme-challenge:
-  ttl: 120
-  type: TXT
-  value: JCNdV9ZjnlmosmLQQHncPLOYCRikQoi0I6MPzrnzLwA
 _dmarc.mail:
   ttl: 1800
   type: TXT
