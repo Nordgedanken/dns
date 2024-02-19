@@ -2,10 +2,10 @@
 '':
   - ttl: 1800
     type: A
-    value: 116.202.1.213
+    value: 65.21.116.74
   - ttl: 1800
     type: AAAA
-    value: 2a01:4f9:4a:451c:2::2
+    value: 2a01:4f9:4a:451c:2:
   - ttl: 1800
     type: CAA
     values:
