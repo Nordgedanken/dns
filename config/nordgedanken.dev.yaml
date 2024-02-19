@@ -232,7 +232,7 @@ ns3:
     type: AAAA
     value: 2a01:4f8:c012:492::1
 
-_acme-challenge.serverstats:
+_acme-challenge.mail:
   ttl: 15
   type: TXT
-  value: pnSEjdB0q9b8UPi9BnzyAYhwKcZtBRstl1FhC5P1JoA
+  value: ahu0CvhgMQ9IZkiNBWCX9DPesOu8oaQ5FOaAZZuitPE
