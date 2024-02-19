@@ -2,10 +2,10 @@
 '':
   - ttl: 1800
     type: A
-    value: 65.21.116.74
+    value: "65.21.116.74"
   - ttl: 1800
     type: AAAA
-    value: 2a01:4f9:4a:451c:2:
+    value: "2a01:4f9:4a:451c:1000::1"
   - ttl: 1800
     type: CAA
     values:
@@ -129,6 +129,9 @@ mail:
     type: A
     value: 65.21.116.74
   - ttl: 1800
+    type: AAAA
+    value: "2a01:4f9:4a:451c:1000::1"
+  - ttl: 1800
     type: MX
     value:
       exchange: mail.nordgedanken.dev.
@@ -141,15 +144,6 @@ mta-sts:
   ttl: 1800
   type: CNAME
   value: mail.nordgedanken.dev.
-mta-sts.mail.k8s:
-  ttl: 1800
-  type: A
-  value: 65.21.116.72
-
-nordgedanken.dev._report._dmarc.mail:
-  ttl: 1800
-  type: TXT
-  value: v=DMARC1
 
 # Kubernetes
 kubernetes: &kubernetes
@@ -167,7 +161,6 @@ kubernetes: &kubernetes
 auth: *kubernetes
 git: *kubernetes
 github-hook: *kubernetes
-mail.k8s: *kubernetes
 netbox: *kubernetes
 paperless: *kubernetes
 search: *kubernetes
@@ -184,20 +177,6 @@ mastodon:
   - ttl: 1800
     type: AAAA
     value: '2a01:4f9:c012:54d3::'
-moderation_widget:
-  - ttl: 1800
-    type: A
-    value: 116.202.1.213
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::2
-stats:
-  - ttl: 1800
-    type: A
-    value: 116.202.1.213
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::2
 
 # Local Homenet
 local:
