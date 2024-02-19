@@ -29,7 +29,7 @@
 _acme-challenge.rdf:
   ttl: 120
   type: TXT
-  value: EqcF4HWw346RCxcPUF9_-bLbLhQb8CixnA7YlQkwSFg
+  value: AUaffkyUCUuKALNYlNg3EjcyqgeUb1fVAchTD1YCsYg
 _autodiscover._tcp:
   ttl: 1800
   type: SRV
