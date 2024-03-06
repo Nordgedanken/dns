@@ -119,6 +119,7 @@ hookshot: *kubernetes
 keycloak: *kubernetes
 matrix-call: *kubernetes
 call: *kubernetes
+call-jwt: *kubernetes
 nordgedanken.lg:
   ttl: 1800
   type: A
