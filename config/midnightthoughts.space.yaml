@@ -117,6 +117,8 @@ fleet: *kubernetes
 grafana: *kubernetes
 hookshot: *kubernetes
 keycloak: *kubernetes
+matrix-call: *kubernetes
+call: *kubernetes
 nordgedanken.lg:
   ttl: 1800
   type: A
