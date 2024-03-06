@@ -121,6 +121,7 @@ matrix-call: *kubernetes
 call: *kubernetes
 call-jwt: *kubernetes
 call-livekit: *kubernetes
+call-s3: *kubernetes
 nordgedanken.lg:
   ttl: 1800
   type: A
