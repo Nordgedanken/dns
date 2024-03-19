@@ -123,6 +123,7 @@ call-jwt: *kubernetes
 call-livekit: *kubernetes
 call-s3: *kubernetes
 console.call-s3: *kubernetes
+users: *kubernetes
 nordgedanken.lg:
   ttl: 1800
   type: A
