@@ -51,9 +51,6 @@ headscale:
   - ttl: 1800
     type: A
     value: 49.13.24.105
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f8:c012:492::1
 kubernetes:
   - ttl: 1800
     type: A
@@ -65,9 +62,6 @@ lg:
   - ttl: 1800
     type: A
     value: 49.13.24.105
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f8:c012:492::1
 mail:
   - ttl: 1800
     type: A
@@ -148,9 +142,6 @@ pbx:
   - ttl: 1800
     type: A
     value: 49.13.24.105
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f8:c012:492::1
 postgres.internal:
   ttl: 60
   type: A
@@ -179,9 +170,6 @@ znc:
   - ttl: 1800
     type: A
     value: 49.13.24.105
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f8:c012:492::1
 search:
   - ttl: 1800
     type: A
