@@ -170,6 +170,10 @@ znc:
   - ttl: 1800
     type: A
     value: 49.13.24.105
+soju:
+  - ttl: 1800
+    type: A
+    value: 37.27.5.79
 search:
   - ttl: 1800
     type: A
