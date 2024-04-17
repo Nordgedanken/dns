@@ -84,7 +84,7 @@ kubernetes_ingress: &kubernetes
   - ttl: 60
     type: A
     values:
-      #- 65.21.116.72
+      - 65.21.116.72
       - 159.69.103.159
       - 65.109.241.200
   - ttl: 60
