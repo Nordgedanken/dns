@@ -183,6 +183,9 @@ local:
   - ttl: 60
     type: A
     value: 95.217.157.108
+  - ttl: 60
+    type: AAAA
+    value: 2a01:4f9:c010:9436::1
 
 # Nameserver
 ns1:
