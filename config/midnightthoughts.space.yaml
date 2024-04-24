@@ -36,6 +36,14 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
+k8s:
+  ttl: 600
+  type: NS
+  values:
+    - ns-1048.awsdns-03.org
+    - ns-1883.awsdns-43.co.uk
+    - ns-221.awsdns-27.com
+    - ns-659.awsdns-18.net
 _dmarc.mail:
   ttl: 1800
   type: TXT
