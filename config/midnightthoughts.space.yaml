@@ -36,7 +36,7 @@
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
-k8s:
+aws:
   ttl: 600
   type: NS
   values:
