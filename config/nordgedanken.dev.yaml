@@ -35,7 +35,7 @@
       preference: 10
     - exchange: in2-smtp.messagingengine.com.
       preference: 20
-      
+
 _submission._tcp:
   type: SRV
   value:
@@ -113,7 +113,11 @@ _caldavs._tcp:
     priority: 0
     target: caldav.fastmail.com.
     weight: 1
-    
+_dmarc:
+  type: TXT
+  values:
+    - v=DMARC1; p=none
+
 fm1._domainkey:
   type: CNAME
   value: fm1.nordgedanken.dev.dkim.fmhosted.com.
