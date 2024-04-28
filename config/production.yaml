@@ -74,9 +74,12 @@ zones:
     sources: [config]
     processors: [spf]
     targets: [cloudflare]
-  nordgedanken.dev.: &default
+  nordgedanken.dev.:
+    sources: [config]
+    processors: [spf]
+    targets: [cloudflare]
+  miki.community.: &default
     sources: [config]
     processors: [spf]
     targets: [powerdns_ns1, powerdns_ns2, powerdns_ns3_v2]
     #targets: [powerdns_ns2, powerdns_ns3_v2]
-  miki.community.: *default

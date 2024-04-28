@@ -20,12 +20,6 @@
     value:
       exchange: mail.nordgedanken.dev.
       preference: 10
-  - ttl: 600
-    type: NS
-    values:
-      - ns1.nordgedanken.dev.
-      - ns2.nordgedanken.dev.
-      - ns3.nordgedanken.dev.
   - ttl: 1800
     type: TXT
     values:
@@ -188,29 +182,6 @@ local:
   - ttl: 60
     type: AAAA
     value: 2a01:4f9:c010:9436::1
-
-# Nameserver
-ns1:
-  - ttl: 1800
-    type: A
-    value: 65.21.116.72
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::5
-ns2:
-  - ttl: 1800
-    type: A
-    value: 37.27.5.79
-  - ttl: 1800
-    type: AAAA
-    value: '2a01:4f9:c012:54d3::'
-ns3:
-  - ttl: 1800
-    type: A
-    value: 49.13.24.105
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f8:c012:492::1
 
 _acme-challenge:
   ttl: 15
