@@ -12,6 +12,33 @@ providers:
     directory: ./config
     default_ttl: 3600
     enforce_order: false
+  cloudflare:
+    class: octodns_cloudflare.CloudflareProvider
+    # The API Token or API Key.
+    # Required permissions for API Tokens are Zone:Read, DNS:Read and DNS:Edit.
+    # Page Rules:Edit is required for managing Page Rules (URLFWD) records.
+    token: env/CLOUDFLARE_TOKEN
+    # Import CDN enabled records as CNAME to {}.cdn.cloudflare.net. Records
+    # ending at .cdn.cloudflare.net. will be ignored when this provider is
+    # not used as the source and the cdn option is enabled.
+    #
+    # See: https://support.cloudflare.com/hc/en-us/articles/115000830351
+    cdn: false
+    # Manage Page Rules (URLFWD) records
+    # pagerules: true
+    # Optional. Default: 4. Number of times to retry if a 429 response
+    # is received.
+    #retry_count: 4
+    # Optional. Default: 300. Number of seconds to wait before retrying.
+    #retry_period: 300
+    # Optional. Default: 50. Number of zones per page.
+    #zones_per_page: 50
+    # Optional. Default: 100. Number of dns records per page.
+    #records_per_page: 100
+    # Optional. Default: 120. Lowest TTL allowed to be set.
+    # A different limit for (non-)enterprise zone applies.
+    # See: https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl
+    #min_ttl: 120
   powerdns_ns1:
     class: octodns_powerdns.PowerDnsProvider
     # The host on which PowerDNS api is listening (required)
