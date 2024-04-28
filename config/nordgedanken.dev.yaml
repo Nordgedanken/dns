@@ -17,14 +17,11 @@
         value: letsencrypt.org; validationmethods=tls-alpn-01,dns-01,http-01
   - ttl: 1800
     type: MX
-    value:
-      exchange: in1-smtp.messagingengine.com.
-      preference: 10
-  - ttl: 1800
-    type: MX
-    value:
-      exchange: in2-smtp.messagingengine.com.
-      preference: 20
+    values:
+      - exchange: in1-smtp.messagingengine.com.
+        preference: 10
+      - exchange: in2-smtp.messagingengine.com.
+        preference: 20
   - ttl: 1800
     type: TXT
     values:
