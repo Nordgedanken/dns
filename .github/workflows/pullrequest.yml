@@ -59,6 +59,7 @@ jobs:
           POWERDNS_API_KEY_NS1: ${{ secrets.POWERDNS_API_KEY_NS1 }}
           POWERDNS_API_KEY_NS2: ${{ secrets.POWERDNS_API_KEY_NS2 }}
           POWERDNS_API_KEY_NS3: ${{ secrets.POWERDNS_API_KEY_NS3 }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
       - name: Get plan output
         id: meta
         run: |
