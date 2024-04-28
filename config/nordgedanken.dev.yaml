@@ -115,8 +115,7 @@ _caldavs._tcp:
     weight: 1
 _dmarc:
   type: TXT
-  values:
-    - "v=DMARC1\; p=none"
+  value: v=DMARC1\; p=none
 
 fm1._domainkey:
   type: CNAME
