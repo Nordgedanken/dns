@@ -20,12 +20,6 @@
     value:
       exchange: mail.nordgedanken.dev.
       preference: 10
-  - ttl: 600
-    type: NS
-    values:
-      - ns1.nordgedanken.dev.
-      - ns2.nordgedanken.dev.
-      - ns3.nordgedanken.dev.
   - ttl: 1800
     type: TXT
     values:
