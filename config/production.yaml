@@ -70,10 +70,13 @@ providers:
     # Send DNS NOTIFY to secondary servers after change (optional, default false)
     # notify: false
 zones:
-  midnightthoughts.space.: &default
+  midnightthoughts.space.:
+    sources: [config]
+    processors: [spf]
+    targets: [cloudflare]
+  nordgedanken.dev.: &default
     sources: [config]
     processors: [spf]
     targets: [powerdns_ns1, powerdns_ns2, powerdns_ns3_v2]
     #targets: [powerdns_ns2, powerdns_ns3_v2]
-  nordgedanken.dev.: *default
   miki.community.: *default
