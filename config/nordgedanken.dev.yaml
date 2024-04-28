@@ -18,126 +18,35 @@
   - ttl: 1800
     type: MX
     value:
-      exchange: mail.nordgedanken.dev.
+      exchange: in1-smtp.messagingengine.com
       preference: 10
+  - ttl: 1800
+    type: MX
+    value:
+      exchange: in2-smtp.messagingengine.com
+      preference: 20
   - ttl: 1800
     type: TXT
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
-      - v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ip4:95.217.202.35 ~all
+      - v=spf1 include:spf.messagingengine.com ?all
+
+fm1._domainkey:
+  type: CNAME
+  value: fm1.nordgedanken.dev.dkim.fmhosted.com.
+
+fm2._domainkey:
+  type: CNAME
+  value: fm2.nordgedanken.dev.dkim.fmhosted.com.
+
+fm3._domainkey:
+  type: CNAME
+  value: fm3.nordgedanken.dev.dkim.fmhosted.com.
 
 # Family
 recipes:
   type: CNAME
   value: mtrnord.github.io.
-
-# Email
-_autodiscover._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 443
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_dmarc: &dmarc
-  ttl: 1800
-  type: TXT
-  value: v=DMARC1\; p=reject\; adkim=s\; aspf=s\; rua=mailto:postmaster@mail.nordgedanken.dev\;
-    ruf=mailto:postmaster@mail.nordgedanken.dev
-_dmarc.mail: *dmarc
-_imap._tcp: &imap_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 143
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_imap._tcp.mail: *imap_tcp
-_imaps._tcp: &imaps_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 993
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_imaps._tcp.mail: *imaps_tcp
-_pop3._tcp: &pop3_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 110
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_pop3._tcp.mail: *pop3_tcp
-_pop3s._tcp: &pop3s_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 995
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_pop3s._tcp.mail: *pop3s_tcp
-_submission._tcp: &submission_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 587
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_submission._tcp.mail: *submission_tcp
-_submissions._tcp: &submissions_tcp
-  ttl: 1800
-  type: SRV
-  value:
-    port: 465
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_submissions._tcp.mail: *submissions_tcp
-autoconfig:
-  ttl: 1800
-  type: CNAME
-  value: mail.nordgedanken.dev.
-
-dkim._domainkey:
-  ttl: 1800
-  type: TXT
-  value: v=DKIM1\; k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwpfwC7+gqVw55vqq+pqR3J0k/pBOVlyXqUo89D08zx91tLHy+mZFv3saiw94FzBEWF7cnvUSyDoyN9fnw6StNX3rMEvr2XCor+F2DpYjnG7gXjjkAPIs+d1/bja0MJkXjE0bXIET4yz3OjP9UVKMlIn3wkzr28KZShIGI8mtWUhC1oR7/tN8LOR1FoZB8GoEsgsOLZoHBUadjN8pE6LmS5MaaYcF3BdYTCQ63rpb5sf0hi9Hy1on+G7sDGE2Eg6ySlmzA9/Z4d8on3ghPKYRVLUs1Osf1k/hPsgJwxn/vDbxoBhaXUt+uxVMaLPadbhFHPWbUOZZD7LdiXjvhB+6wIDAQAB
-dkim._domainkey.mail:
-  ttl: 1800
-  type: TXT
-  value: v=DKIM1\; k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzq73h8EUXEpSzIMWppGWr08k0OpPJDZ6ohrTHlTGfELjxfLoY0ZKM1OsWhpTrFimRWWSoXCUQCfshSDw6KWEgF1TeTh/+jhBoyJwUH37phC/jrXBV7Zqs6iAcwCw1gznV2wWs/uBcJcamD8RRq2wwBN9cIZksca7J/Tkm3WzcxqriX8PpSm4cbYl1MjDl5K8JWTIxNWlRXKyDW8H4II7NPnwOK8keExYEIh7AkE4suegtu73dxEwSz7Ct9a+Ch8mNZsG3WI2JldlKRkvUJB3CdFYHXIjRV4ibghoZEFzYQN8LIz3l6BRxFgvLDVXYj0v21fMXa3nxes+2ou2/qfrGwIDAQAB
-mail.nordgedanken.dev._report._dmarc.mail:
-  ttl: 1800
-  type: TXT
-  value: v=DMARC1
-
-mail:
-  - ttl: 1800
-    type: A
-    value: 65.21.116.74
-  - ttl: 1800
-    type: AAAA
-    value: "2a01:4f9:4a:451c:2::5"
-  - ttl: 1800
-    type: MX
-    value:
-      exchange: mail.nordgedanken.dev.
-      preference: 10
-  - ttl: 1800
-    type: TXT
-    value: v=spf1 mx a:mail.nordgedanken.dev ip4:65.21.116.72 ~all
-
-mta-sts:
-  ttl: 1800
-  type: CNAME
-  value: mail.nordgedanken.dev.
 
 # Kubernetes
 kubernetes: &kubernetes
