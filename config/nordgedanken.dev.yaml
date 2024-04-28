@@ -27,7 +27,93 @@
     values:
       - google-site-verification=SkIjIdwvyBPvaivZFa5KgLX22pwSJdINdaTf0XAi5Qc
       - v=spf1 include:spf.messagingengine.com ?all
-
+'*':
+  ttl: 1800
+  type: MX
+  values:
+    - exchange: in1-smtp.messagingengine.com.
+      preference: 10
+    - exchange: in2-smtp.messagingengine.com.
+      preference: 20
+      
+_submission._tcp:
+  type: SRV
+  value:
+    port: 587
+    priority: 0
+    target: smtp.fastmail.com
+    weight: 1
+_imap._tcp:
+  type: SRV
+  value:
+    port: 0
+    priority: 0
+    target: .
+    weight: 0
+_imaps._tcp:
+  type: SRV
+  value:
+    port: 993
+    priority: 0
+    target: imap.fastmail.com
+    weight: 1
+_pop3._tcp:
+  type: SRV
+  value:
+    port: 0
+    priority: 0
+    target: .
+    weight: 0
+_pop3s._tcp:
+  type: SRV
+  value:
+    port: 995
+    priority: 10
+    target: pop.fastmail.com
+    weight: 1
+_jmap._tcp:
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: api.fastmail.com
+    weight: 1
+_autodiscover._tcp:
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: autodiscover.fastmail.com
+    weight: 1
+_carddav._tcp:
+  type: SRV
+  value:
+    port: 0
+    priority: 0
+    target: .
+    weight: 0
+_carddavs._tcp:
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: carddav.fastmail.com
+    weight: 1
+_caldav._tcp:
+  type: SRV
+  value:
+    port: 0
+    priority: 0
+    target: .
+    weight: 0
+_caldavs._tcp:
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: caldav.fastmail.com
+    weight: 1
+    
 fm1._domainkey:
   type: CNAME
   value: fm1.nordgedanken.dev.dkim.fmhosted.com.
