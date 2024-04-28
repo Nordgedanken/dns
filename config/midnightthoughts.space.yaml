@@ -27,23 +27,9 @@
     value:
       exchange: mail.midnightthoughts.space.
       preference: 10
-  - ttl: 600
-    type: NS
-    values:
-      - ns1.nordgedanken.dev.
-      - ns2.nordgedanken.dev.
-      - ns3.nordgedanken.dev.
   - ttl: 1800
     type: TXT
     value: google-site-verification=YeO0rqvYWOZoW6yj3MRf77luDe9CURDbmPYLFYiBXo8
-aws:
-  ttl: 600
-  type: NS
-  values:
-    - ns-1048.awsdns-03.org.
-    - ns-1883.awsdns-43.co.uk.
-    - ns-221.awsdns-27.com.
-    - ns-659.awsdns-18.net.
 _dmarc.mail:
   ttl: 1800
   type: TXT

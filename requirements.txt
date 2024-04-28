@@ -1,3 +1,4 @@
-octodns==1.2.1
+octodns==1.6.1
 octodns-powerdns==0.0.5
 octodns-spf==0.0.2
+octodns-cloudflare==0.0.5
