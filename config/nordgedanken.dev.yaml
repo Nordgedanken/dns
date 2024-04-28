@@ -41,7 +41,7 @@ _submission._tcp:
   value:
     port: 587
     priority: 0
-    target: smtp.fastmail.com
+    target: smtp.fastmail.com.
     weight: 1
 _imap._tcp:
   type: SRV
@@ -55,7 +55,7 @@ _imaps._tcp:
   value:
     port: 993
     priority: 0
-    target: imap.fastmail.com
+    target: imap.fastmail.com.
     weight: 1
 _pop3._tcp:
   type: SRV
@@ -69,21 +69,21 @@ _pop3s._tcp:
   value:
     port: 995
     priority: 10
-    target: pop.fastmail.com
+    target: pop.fastmail.com.
     weight: 1
 _jmap._tcp:
   type: SRV
   value:
     port: 443
     priority: 0
-    target: api.fastmail.com
+    target: api.fastmail.com.
     weight: 1
 _autodiscover._tcp:
   type: SRV
   value:
     port: 443
     priority: 0
-    target: autodiscover.fastmail.com
+    target: autodiscover.fastmail.com.
     weight: 1
 _carddav._tcp:
   type: SRV
@@ -97,7 +97,7 @@ _carddavs._tcp:
   value:
     port: 443
     priority: 0
-    target: carddav.fastmail.com
+    target: carddav.fastmail.com.
     weight: 1
 _caldav._tcp:
   type: SRV
@@ -111,7 +111,7 @@ _caldavs._tcp:
   value:
     port: 443
     priority: 0
-    target: caldav.fastmail.com
+    target: caldav.fastmail.com.
     weight: 1
     
 fm1._domainkey:
