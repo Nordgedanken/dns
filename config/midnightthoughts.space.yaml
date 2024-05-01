@@ -128,6 +128,13 @@ play-workadventure: *kubernetes
 pusher-workadventure: *kubernetes
 room-api-workadventure: *kubernetes
 uploader-workadventure: *kubernetes
+
+vault:
+  - type: A
+    value: 95.217.170.156
+  - type: AAAA
+    value: '2a01:4f9:c01e:32d::1'
+
 nordgedanken.lg:
   ttl: 1800
   type: A
