@@ -93,7 +93,6 @@ kubernetes_ingress: &kubernetes
 matrix: *kubernetes
 auth: *kubernetes
 matrix.art: *kubernetes
-matrix.draupnir: *kubernetes
 postgres-ui: *kubernetes
 search.art: *kubernetes
 sliding.matrix: *kubernetes
@@ -129,11 +128,12 @@ pusher-workadventure: *kubernetes
 room-api-workadventure: *kubernetes
 uploader-workadventure: *kubernetes
 
-vault:
+vault: &new_cluster
   - type: A
     value: 95.217.170.156
   - type: AAAA
     value: '2a01:4f9:c01e:32d::1'
+matrix.draupnir: *new_cluster
 
 nordgedanken.lg:
   ttl: 1800
