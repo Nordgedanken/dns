@@ -92,41 +92,16 @@ kubernetes_ingress: &kubernetes
       - '2a01:4f9:c010:9436::2'
 matrix: *kubernetes
 auth: *kubernetes
-matrix.art: *kubernetes
-postgres-ui: *kubernetes
-search.art: *kubernetes
 sliding.matrix: *kubernetes
-spec: *kubernetes
 weave: *kubernetes
 webhook.kubernetes: *kubernetes
 zammad: *kubernetes
-art: *kubernetes
-coreharbor.kubernetes: *kubernetes
 dashboard.kubernetes: *kubernetes
-draupnir: *kubernetes
 fleet: *kubernetes
-grafana: *kubernetes
 hookshot: *kubernetes
 keycloak: *kubernetes
-matrix-call: *kubernetes
-call: *kubernetes
-call-jwt: *kubernetes
-call-livekit: *kubernetes
-call-s3: *kubernetes
-console.call-s3: *kubernetes
 users: *kubernetes
 admin.users: *kubernetes
-ui.k8s: *kubernetes
-n8n: *kubernetes
-workadventure: *kubernetes
-chat-workadventure: *kubernetes
-xmpp-workadventure: *kubernetes
-icon-workadventure: *kubernetes
-map-workadventure: *kubernetes
-play-workadventure: *kubernetes
-pusher-workadventure: *kubernetes
-room-api-workadventure: *kubernetes
-uploader-workadventure: *kubernetes
 
 vault: &new_cluster
   - type: A
@@ -134,6 +109,8 @@ vault: &new_cluster
   - type: AAAA
     value: '2a01:4f9:c01e:32d::1'
 matrix.draupnir: *new_cluster
+grafana: *new_cluster
+ui.k8s: *new_cluster
 
 nordgedanken.lg:
   ttl: 1800
