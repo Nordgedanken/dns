@@ -90,12 +90,10 @@ kubernetes_ingress: &kubernetes
       #- '2a01:4f8:c012:492::1'
       #- '2a01:4f9:c012:54d3::1'
       - '2a01:4f9:c010:9436::2'
-auth: *kubernetes
 sliding.matrix: *kubernetes
 weave: *kubernetes
 webhook.kubernetes: *kubernetes
 zammad: *kubernetes
-dashboard.kubernetes: *kubernetes
 fleet: *kubernetes
 hookshot: *kubernetes
 keycloak: *kubernetes
@@ -111,6 +109,8 @@ matrix.draupnir: *new_cluster
 grafana: *new_cluster
 ui.k8s: *new_cluster
 matrix: *new_cluster
+dashboard.kubernetes: *new_cluster
+auth: *new_cluster
 
 nordgedanken.lg:
   ttl: 1800
