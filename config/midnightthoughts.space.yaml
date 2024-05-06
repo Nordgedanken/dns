@@ -108,6 +108,7 @@ vault: &new_cluster
   - type: AAAA
     value: '2a01:4f9:c01e:32d::1'
 matrix.draupnir: *new_cluster
+draupnir: *new_cluster
 grafana: *new_cluster
 ui.k8s: *new_cluster
 matrix: *new_cluster
