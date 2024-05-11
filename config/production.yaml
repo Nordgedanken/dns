@@ -48,7 +48,7 @@ zones:
     sources: [config]
     processors: [spf]
     targets: [cloudflare]
-  miki.community.: &default
+  miki.community.:
     sources: [config]
     processors: [spf]
     targets: [cloudflare]
