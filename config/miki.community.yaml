@@ -13,83 +13,8 @@
         tag: issue
         value: letsencrypt.org; validationmethods=tls-alpn-01,dns-01,http-01
   - ttl: 1800
-    type: MX
-    value:
-      exchange: mail.nordgedanken.dev.
-      preference: 10
-  - ttl: 600
-    type: NS
-    values:
-      - ns1.nordgedanken.dev.
-      - ns2.nordgedanken.dev.
-      - ns3.nordgedanken.dev.
-  - ttl: 1800
     type: TXT
     value: google-site-verification=tcGRl_gNRBdFRI8-tNAPj6x-8FbmGihFNcYn9_xS7tc
-_acme-challenge.rdf:
-  ttl: 120
-  type: TXT
-  value: AUaffkyUCUuKALNYlNg3EjcyqgeUb1fVAchTD1YCsYg
-_autodiscover._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 443
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_imap._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 143
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_imaps._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 993
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_pop3._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 110
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_pop3s._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 995
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-_submission._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 587
-    priority: 20
-    target: mail.nordgedanken.dev.
-    weight: 1
-_submissions._tcp:
-  ttl: 1800
-  type: SRV
-  value:
-    port: 465
-    priority: 10
-    target: mail.nordgedanken.dev.
-    weight: 1
-autoconfig:
-  ttl: 1800
-  type: CNAME
-  value: mail.nordgedanken.dev.
 data:
   ttl: 1800
   type: A
@@ -102,7 +27,3 @@ forum:
   ttl: 1800
   type: A
   value: 49.13.24.105
-rdf:
-  ttl: 1800
-  type: A
-  value: 65.21.116.74

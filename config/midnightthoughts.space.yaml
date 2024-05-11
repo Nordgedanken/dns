@@ -92,15 +92,7 @@ kubernetes_ingress: &kubernetes
       #- '2a01:4f8:c012:492::1'
       #- '2a01:4f9:c012:54d3::1'
       - '2a01:4f9:c010:9436::2'
-sliding.matrix: *kubernetes
-weave: *kubernetes
-webhook.kubernetes: *kubernetes
 zammad: *kubernetes
-fleet: *kubernetes
-hookshot: *kubernetes
-keycloak: *kubernetes
-users: *kubernetes
-admin.users: *kubernetes
 
 vault: &new_cluster
   - type: A
@@ -115,67 +107,15 @@ matrix: *new_cluster
 dashboard.kubernetes: *new_cluster
 auth: *new_cluster
 
-nordgedanken.lg:
-  ttl: 1800
-  type: A
-  value: 10.0.1.2
 notes:
   ttl: 1800
   type: CNAME
   value: cname.vercel-dns.com.
-pbx:
-  - ttl: 1800
-    type: A
-    value: 49.13.24.105
 postgres.internal:
   ttl: 60
   type: A
   value: 10.0.3.1
-redmine: *kubernetes
-rspamd:
-  - ttl: 1800
-    type: A
-    value: 65.21.116.74
-  - ttl: 1800
-    type: AAAA
-    value: 2a01:4f9:4a:451c:2::2
 status.draupnir:
   ttl: 1800
   type: CNAME
   value: the-draupnir-project.github.io.
-worker-1.lg:
-  ttl: 1800
-  type: A
-  value: 10.0.2.3
-worker-2.lg:
-  ttl: 1800
-  type: A
-  value: 10.0.2.2
-znc:
-  - ttl: 1800
-    type: A
-    value: 49.13.24.105
-soju:
-  - ttl: 1800
-    type: A
-    value: 37.27.5.79
-search:
-  - ttl: 1800
-    type: A
-    value: "37.27.5.79"
-  - ttl: 1800
-    type: AAAA
-    value: "2a01:4f9:c012:54d3::"
-# Personal discourse store
-personal:
-  - ttl: 1800
-    type: A
-    value: 37.27.5.79
-  - ttl: 1800
-    type: AAAA
-    value: "2a01:4f9:c012:54d3::"
-
-_acme-challenge:
-  ttl: 15
-  type: TXT
-  value: Mb0--1OsXaW3G2ugkX8VmsVBJ2ijCg8gf301rxfqK0E
