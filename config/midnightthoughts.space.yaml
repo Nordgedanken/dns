@@ -126,6 +126,13 @@ _xmpp-client._tcp.xmpp:
       priority: 5
       weight: 0
       target: xmpp.midnightthoughts.space.
+_xmpps-client._tcp.xmpp:
+  type: SRV
+  values:
+    - port: 5223
+      priority: 5
+      weight: 0
+      target: xmpp.midnightthoughts.space.
 _xmpp-server._tcp.xmpp:
   type: SRV
   values:
