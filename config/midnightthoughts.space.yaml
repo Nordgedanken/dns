@@ -106,6 +106,7 @@ ui.k8s: *new_cluster
 matrix: *new_cluster
 dashboard.kubernetes: *new_cluster
 auth: *new_cluster
+xmpp: *new_cluster
 
 notes:
   ttl: 1800
