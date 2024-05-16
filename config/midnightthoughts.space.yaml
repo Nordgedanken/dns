@@ -107,6 +107,10 @@ matrix: *new_cluster
 dashboard.kubernetes: *new_cluster
 auth: *new_cluster
 xmpp: *new_cluster
+conference.xmpp: *new_cluster
+proxy.xmpp: *new_cluster
+upload.xmpp: *new_cluster
+vjud.xmpp: *new_cluster
 
 notes:
   ttl: 1800
