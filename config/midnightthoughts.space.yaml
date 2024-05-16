@@ -111,6 +111,7 @@ conference.xmpp: *new_cluster
 proxy.xmpp: *new_cluster
 upload.xmpp: *new_cluster
 vjud.xmpp: *new_cluster
+pubsub.xmpp: *new_cluster
 
 notes:
   ttl: 1800
