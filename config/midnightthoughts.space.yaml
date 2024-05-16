@@ -140,6 +140,13 @@ _xmpp-server._tcp.xmpp:
       priority: 5
       weight: 0
       target: xmpp.midnightthoughts.space.
+_xmpps-server._tcp.xmpp:
+  type: SRV
+  values:
+    - port: 5270
+      priority: 5
+      weight: 0
+      target: xmpp.midnightthoughts.space.
 
 notes:
   ttl: 1800
