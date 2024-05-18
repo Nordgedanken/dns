@@ -106,6 +106,7 @@ ui.k8s: *new_cluster
 matrix: *new_cluster
 dashboard.kubernetes: *new_cluster
 auth: *new_cluster
+projects: *new_cluster
 
 # xmpp
 xmpp: &xmpp
@@ -152,10 +153,6 @@ notes:
   ttl: 1800
   type: CNAME
   value: cname.vercel-dns.com.
-postgres.internal:
-  ttl: 60
-  type: A
-  value: 10.0.3.1
 status.draupnir:
   ttl: 1800
   type: CNAME
