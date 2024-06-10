@@ -107,6 +107,7 @@ matrix: *new_cluster
 dashboard.kubernetes: *new_cluster
 auth: *new_cluster
 projects: *new_cluster
+plausible: *new_cluster
 
 # xmpp
 xmpp: &xmpp
